@@ -1,17 +1,18 @@
-import DetailList from './components/detaillist';
-import Header from './components/header';
-import List from './components/list';
+import React from 'react';
+import MainPage from "./pages/mainpage";
+import DetailPage from "./pages/detailpage";
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
 
 
 function App() {
   return (
-    <div>
-      <Header/>
-      <List>
-      </List>
-      
-
-    </div>
+    <BrowserRouter>
+    <Switch>
+      <Route exact path="/" component={MainPage} />
+      <Route path="/detail/:detail" component={DetailPage} />
+    </Switch>
+  </BrowserRouter>
   );
 }
 

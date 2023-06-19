@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useHistory } from 'react-router-dom';
 
 const DetailListContainer = styled.ul`
   position: absolute;
@@ -18,13 +19,22 @@ const DetailItem = styled.li`
   margin: 10px;
   list-style-type: none;
   white-space: nowrap;
+  cursor: pointer;
 `;
 
 function DetailList({ details }) {
+  const history = useHistory();
+
+  const handleItemClick = (detail) => {
+    history.push(`/detail/${detail}`);
+  };
+
   return (
     <DetailListContainer>
       {details.map((detail, index) => (
-        <DetailItem key={index}>{detail}</DetailItem>
+        <DetailItem key={index} onClick={() => handleItemClick(detail)}>
+          {detail}
+        </DetailItem>
       ))}
     </DetailListContainer>
   );

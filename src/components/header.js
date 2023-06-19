@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import React, { useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Div = styled.div`
   display: flex;
@@ -24,6 +25,7 @@ const TopBox = styled.div`
 `;
 
 const InnerBox1 = styled.div` 
+margin-right: 10px;
 `;
 
 const InnerBox2 = styled.div`
@@ -48,10 +50,11 @@ function Header() {
     return (
       <Div>
         <LogoBox>
-        <a href="/"><Logo src="Anw.png" /></a>
-
+        <Link to="/">
+        <Logo src="/images/Anw.png" alt="로고" />
+      </Link>
         </LogoBox>
-          
+        
         <TopBox>
           <InnerBox1>
             <Text1>ALLNEWS</Text1>

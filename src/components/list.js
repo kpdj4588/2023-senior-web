@@ -8,17 +8,6 @@ flex-direction: row;
 gap: 50px;
 `;
 
-const ContainerWrapper = styled.div` 
-  display: flex;
-
-`;
-
-const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    
-`;
-
 const ListBox = styled.div`
   display: flex;
   flex-direction: column;
@@ -40,31 +29,7 @@ const ListItem = styled.div`
   position: relative;
 `;
 
-const Text1 = styled.p` //오늘의 토픽 순위
-font-size: 20px;
-font-weight: bold;
-margin-bottom: 10px;
-`;
 
-const Text2 = styled.p` //추천 순위
-font-size: 20px;
-font-weight: bold;
-margin-bottom: 10px;
-`;
-
-const Container1 = styled.div`
-width: 462px;
-height: 250px;
-background: #E4E4E4;
-margin-right: 50px;
-z-index: 0;
-`;
-
-const Container2 = styled.div`
-width: 580px;
-height: 250px;
-background: #E4E4E4;
-`;
 
 function List() {
   const [activeItem, setActiveItem] = useState(null);
@@ -76,16 +41,17 @@ function List() {
   const handleItemLeave = () => {
     setActiveItem(null);
   };
+  
 
   const items = [
     { title: '정책', details: ['경제', '일자리', '청년'] },
-    { title: '학교', details: ['초등학교', '중학교', '고등학교', '대학교'] },
-    { title: '문화', details: ['Detail 7', 'Detail 8', 'Detail 9', 'Detail 10'] },
-    { title: '여행', details: ['Detail 7', 'Detail 8', 'Detail 9', 'Detail 10'] },
-    { title: '건강', details: ['Detail 7', 'Detail 8', 'Detail 9', 'Detail 10'] },
-    { title: '음식', details: ['Detail 7', 'Detail 8', 'Detail 9', 'Detail 10'] },
-    { title: '취미', details: ['Detail 7', 'Detail 8', 'Detail 9', 'Detail 10'] },
-    { title: '애완동물', details: ['Detail 7', 'Detail 8', 'Detail 9', 'Detail 10'] },
+    { title: '학교', details: ['고등학교', '대학교'] },
+    { title: '문화', details: ['음악', '패션'] },
+    { title: '여행', details: ['국내여행', '해외여행'] },
+    { title: '미용', details: ['코스메틱'] },
+    { title: '음식', details: ['요리', '베이킹'] },
+    { title: '취미', details: ['스포츠', '영화'] },
+    { title: '애완동물', details: ['고양이', '강아지'] },
   ];
 
   return (
@@ -102,18 +68,7 @@ function List() {
         </ListItem>
       ))}
     </ListBox>
-    <ContainerWrapper>
-        <Container>
-          <Text1>오늘의 토픽 순위👑</Text1>
-          <Container1></Container1>
-        </Container>
-        <Container>
-          <Text2>추천 이슈👍</Text2>
-          <Container2></Container2>
-        </Container>
-      </ContainerWrapper>
-    
-    
+
     </Div>
   );
 }
