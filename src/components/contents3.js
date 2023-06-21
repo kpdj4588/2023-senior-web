@@ -1,6 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 const Container1 = styled.div`
   display: flex;
@@ -49,7 +49,9 @@ function Contents3 (props) {
         {images[topic] &&
           images[topic].map((src, index) => (
             <ImageBox key={index}>
-              <Image src={src} alt={topic} />
+              <Link to={`/ContentPage${src}`}>
+                <Image src={src} alt={topic} />
+              </Link>
             </ImageBox>
           ))}
         </Container1>

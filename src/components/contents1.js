@@ -2,14 +2,13 @@ import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-
 const ContainerWrapper = styled.div` 
   display: flex;
 `;
 
 const Container = styled.div`
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 `;
 
 const Text1 = styled.p`
@@ -29,7 +28,6 @@ const Text3 = styled.p`
   font-weight: bold;
   margin-bottom: 10px;
 `;
-
 
 const Container1 = styled.div`
   display: flex;
@@ -63,8 +61,8 @@ const Container3 = styled.div`
 `;
 
 const SlideBox = styled.div`
-width: 50px;
-height: 100%;
+  width: 50px;
+  height: 100%;
 `;
 
 const ImageBox = styled.div`
@@ -81,7 +79,6 @@ const SlideContent = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  
 `;
 
 const SlideshowImage = styled.img`
@@ -187,9 +184,11 @@ function Contents1() {
           <Text2>추천 이슈👍</Text2>
           <Container2>
             <SlideContent>
-              <SlideshowImage src={images[currentImageIndex]} alt={`Image ${currentImageIndex + 1}`} />
+              <StyledLink to={`/ContentPage/${images[currentImageIndex]}`}>
+                <SlideshowImage src={images[currentImageIndex]} alt={`Image ${currentImageIndex + 1}`} />
+              </StyledLink>
               <SlideBox>
-              <Comment>{comments[currentImageIndex]}</Comment>
+                <Comment>{comments[currentImageIndex]}</Comment>
               </SlideBox>
             </SlideContent>
           </Container2>
@@ -198,22 +197,34 @@ function Contents1() {
       <Text3>오늘의 카드 뉴스✅</Text3>
       <Container3>
         <ImageBox>
-          <Image src="/images/aa.png" alt="Image 1" />
+          <StyledLink to={`/ContentPage${images[0]}`}>
+            <Image src="/images/aa.png" alt="Image 1" />
+          </StyledLink>
         </ImageBox>
         <ImageBox>
-          <Image src="/images/ab.png" alt="Image 2" />
+          <StyledLink to={`/ContentPage${images[1]}`}>
+            <Image src="/images/ab.png" alt="Image 2" />
+          </StyledLink>
         </ImageBox>
         <ImageBox>
-          <Image src="/images/ac.png" alt="Image 3" />
+          <StyledLink to={`/ContentPage${images[2]}`}>
+            <Image src="/images/ac.png" alt="Image 3" />
+          </StyledLink>
         </ImageBox>
         <ImageBox>
-          <Image src="/images/ad.png" alt="Image 4" />
+          <StyledLink to={`/ContentPage${images[3]}`}>
+            <Image src="/images/ad.png" alt="Image 4" />
+          </StyledLink>
         </ImageBox>
         <ImageBox>
-          <Image src="/images/ae.png" alt="Image 5" />
+          <StyledLink to={`/ContentPage${images[4]}`}>
+            <Image src="/images/ae.png" alt="Image 5" />
+          </StyledLink>
         </ImageBox>
         <ImageBox>
-          <Image src="/images/af.png" alt="Image 6" />
+          <StyledLink to={`/ContentPage${images[5]}`}>
+            <Image src="/images/af.png" alt="Image 6" />
+          </StyledLink>
         </ImageBox>
       </Container3>
     </div>
