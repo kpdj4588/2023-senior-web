@@ -2,7 +2,6 @@
   "name": "finaltest",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://kpdj4588.github.io/2023-senior-web/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -10,7 +9,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^5.3.4",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "styled-components": "^6.0.0-rc.3",
     "web-vitals": "^2.1.4"
   },

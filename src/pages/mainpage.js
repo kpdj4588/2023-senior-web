@@ -12,6 +12,14 @@ gap: 32px;
 
 `;
 
+const AdverTise = styled.div`
+display: flex;
+  flex-direction: column;
+  width: 462px;
+  height: 600px;
+  background: #E4E4E4;
+`;
+
 function MainPage() {
  
     return (
@@ -22,6 +30,7 @@ function MainPage() {
         <List>
         </List>
         <Contents1/>
+        <AdverTise>광고</AdverTise>
         </ContainerBox>
         
       </div>

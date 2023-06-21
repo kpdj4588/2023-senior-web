@@ -30,6 +30,13 @@ const Container = styled.div`
     flex-direction: column;
     
 `;
+const AdverTise = styled.div`
+display: flex;
+  flex-direction: column;
+  width: 462px;
+  height: 600px;
+  background: #E4E4E4;
+`;
 
 function DetailPage(props) {
   const { match } = props;
@@ -49,6 +56,7 @@ function DetailPage(props) {
             <Contents3 topic={detail} />
             </Container>
           </ContainerWrapper>
+          <AdverTise>광고</AdverTise>
       </ContainerBox>
     </div>
   );
