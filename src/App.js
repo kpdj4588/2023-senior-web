@@ -12,7 +12,7 @@ function App() {
     <Switch>
       <Route exact path="/" component={MainPage} />
       <Route path="/detail/:detail" component={DetailPage} />
-      <Route path="/ContentPage/" component={ContentPage} />
+      <Route path="/ContentPage/:detail" component={ContentPage} />
     </Switch>
   </BrowserRouter>
   );
