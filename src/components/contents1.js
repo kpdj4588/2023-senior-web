@@ -184,7 +184,7 @@ function Contents1() {
           <Text2>추천 이슈👍</Text2>
           <Container2>
             <SlideContent>
-              <StyledLink to={`/ContentPage/${images[currentImageIndex]}`}>
+              <StyledLink to={`/ContentPage${images[currentImageIndex]}`}>
                 <SlideshowImage src={images[currentImageIndex]} alt={`Image ${currentImageIndex + 1}`} />
               </StyledLink>
               <SlideBox>
